@@ -24,7 +24,7 @@ const Home = () => {
         navigate("/login");
       }
       
-      const { data } = await axios.post("http://localhost:3333",{token});
+      const { data } = await axios.post("https://stockpro-kre3.onrender.com",{token});
 
 
       const { status, users } = data;
