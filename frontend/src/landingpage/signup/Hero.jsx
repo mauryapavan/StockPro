@@ -27,7 +27,7 @@ function Signup() {
 
         try {
             const { data } = await axios.post(
-                "http://localhost:3333/signin",
+                "https://stockpro-kre3.onrender.com/signin",
                 {
                     ...inputValue,
                 }
