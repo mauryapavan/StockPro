@@ -18,7 +18,7 @@ const BuyActionWindow = ({ uid }) => {
 
   const handleBuyClick = async() => {
     
-    await axios.post("http://localhost:3333/neworder",[{ name:uid, qty:stockQuantity,price:stockPrice,mode:"yes"},token])
+    await axios.post("https://stockpro-kre3.onrender.com/neworder",[{ name:uid, qty:stockQuantity,price:stockPrice,mode:"yes"},token])
 
     buywindowfunction(uid);
   };
