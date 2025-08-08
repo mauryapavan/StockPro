@@ -35,7 +35,7 @@ function Signup() {
             const { success, message } = data;
             console.log(data)
             if (success) {
-                 window.location = "http://localhost:5173";
+                 window.location = "https://stockpro-1.onrender.com";
             }
         } catch (error) {
             console.log(error);
