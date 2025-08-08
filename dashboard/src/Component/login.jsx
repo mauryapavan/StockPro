@@ -40,7 +40,7 @@ function Login() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3333/login",
+        "https://stockpro-kre3.onrender.com/login",
         {
           ...inputValue,
         },
