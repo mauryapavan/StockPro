@@ -12,7 +12,7 @@ const Orders = () => {
   
   useEffect(() => {
 
-    axios.post("https://stockpro-kre3.onrender.com", {token})
+    axios.post("https://stockpro-kre3.onrender.com/myorder", {token})
       .then((res) => {
         setorder(res.data)
       })
