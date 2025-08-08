@@ -12,7 +12,7 @@ const Orders = () => {
   
   useEffect(() => {
 
-    axios.post("http://localhost:3333/myorder", {token})
+    axios.post("https://stockpro-kre3.onrender.com", {token})
       .then((res) => {
         setorder(res.data)
       })
