@@ -6,7 +6,7 @@ import { Verticalchart } from "./Verticalchart";
 const Holdings = () => {
   let [holdings,setholdings]=useState([]);
   useEffect(()=>{
-    axios.get("http://localhost:3333/allholdings")
+    axios.get("https://stockpro-kre3.onrender.com/allholdings")
     .then((res)=>{
       
       setholdings(res.data)
