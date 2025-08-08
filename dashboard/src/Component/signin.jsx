@@ -35,11 +35,10 @@ function Signin() {
        
         try {
           const { data } = await axios.post(
-            "http://localhost:3333/signin",
+            "https://stockpro-kre3.onrender.com/signin",
             {
               ...inputValue,
-            },
-            { withCredentials: true }
+            }
           );
           const { success, message } = data;
           console.log(data)
