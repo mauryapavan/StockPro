@@ -1,6 +1,7 @@
 import React from 'react';
-
+import {useNavigate} from 'react-router-dom'
 function Navbar() {
+     let navigate=useNavigate()
     return (<nav className="navbar navbar-expand-lg border  p-3" style={{backgroundColor:"#97abcc"}} >
         <div className="container-fluid" >
             <a class="navbar-brand" href="/" style={{color:"Blue",fontSize:"2rem"}}><i class="fa-solid fa-money-bill-trend-up"></i> Stockpro</a>
@@ -10,19 +11,19 @@ function Navbar() {
             <div class="collapse navbar-collapse fs-5 " id="navbarNav" style={{marginLeft:"40%"}}>
                 <ul class="navbar-nav ">
                     <li class="nav-item  p-3 text-center" >
-                        <a class="nav-link "  href="/signup" >Signup</a>
+                        <a class="nav-link " onClick={()=>{navigate("/signup")}} >Signup</a>
                     </li>
                     <li class="nav-item  p-3 ">
-                        <a class="nav-link ms-3" href="/pricing">Pricing</a>
+                        <a class="nav-link ms-3" onClick={()=>{navigate("/pricing")}}>Pricing</a>
                     </li>
                     <li class="nav-item  p-3">
-                        <a class="nav-link " href="/product">Products</a>
+                        <a class="nav-link " onClick={()=>{navigate("/product")}}>Products</a>
                     </li>
                     <li class="nav-item p-3">
-                        <a class="nav-link ms-3" href="/about">About</a>
+                        <a class="nav-link ms-3" onClick={()=>{navigate("/about")}}>About</a>
                     </li>
                     <li class="nav-item  p-3">
-                        <a class="nav-link ms-3 " href="/support">supports</a>
+                        <a class="nav-link ms-3 " onClick={()=>{navigate("/support")}}>supports</a>
                     </li>
                 </ul>
             </div>
