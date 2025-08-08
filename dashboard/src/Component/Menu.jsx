@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import UserContext from "../Context/usercontext";
 
 
 const Menu = () => {
-
+ let navigate=useNavigate()
   let { user } = useContext(UserContext);
 
   const [selectedmenu, setselectedmenu] = useState(0);
@@ -13,9 +13,10 @@ const Menu = () => {
 
 
 
-  const handlemenuclick = (index) => {
+   const handlemenuclick = (index,url) => {
 
     setselectedmenu(index);
+    navigate(url)
 
   };
   const handleProfileClick = (index) => {
@@ -31,33 +32,33 @@ const Menu = () => {
 
 
       <div className="menus">
-        <ul>
+         <ul>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/" onClick={() => handlemenuclick(0)}>
-              <p className={selectedmenu === 0 ? activeMenuClass : menuClass}>Dashboard</p>
-            </Link>
-          </li>
-          <li><Link style={{ textDecoration: "none" }} to="/orders" onClick={() => handlemenuclick(1)}>
-            <p className={selectedmenu === 1 ? activeMenuClass : menuClass}>Orders</p>
-          </Link>
+
+            <p className={selectedmenu === 0 ? activeMenuClass : menuClass} onClick={() => handlemenuclick(0, "/")}>Dashboard</p>
 
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/holdings" onClick={() => handlemenuclick(2)}>
-              <p className={selectedmenu === 2 ? activeMenuClass : menuClass}>Holdings</p>
-            </Link>
+            <p className={selectedmenu === 1 ? activeMenuClass : menuClass} onClick={() => handlemenuclick(1, "/orders")}>Orders</p>
+
 
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/positions" onClick={() => handlemenuclick(3)}>
-              <p className={selectedmenu === 3 ? activeMenuClass : menuClass}>Positions</p>
-            </Link>
+
+            <p className={selectedmenu === 2 ? activeMenuClass : menuClass} onClick={() => handlemenuclick(2, "/holdings")}>Holdings</p>
+
 
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/funds" onClick={() => handlemenuclick(4)}>
-              <p className={selectedmenu === 4 ? activeMenuClass : menuClass}>Funds</p>
-            </Link>
+
+            <p className={selectedmenu === 3 ? activeMenuClass : menuClass} onClick={() => handlemenuclick(3, "/positions")}>Positions</p>
+
+
+          </li>
+          <li>
+
+            <p className={selectedmenu === 4 ? activeMenuClass : menuClass} onClick={() => handlemenuclick(4, "/funds")}>Funds</p>
+
 
           </li>
 
