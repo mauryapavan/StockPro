@@ -4,7 +4,7 @@ import axios from "axios";
 const Positions = () => {
   let [positions,setpositions]=useState([]);
   useEffect(()=>{
-    axios.get("http://localhost:3333/allpositions")
+    axios.get("https://stockpro-kre3.onrender.com/allpositions")
     .then((res)=>{
       
       setpositions(res.data)
