@@ -49,7 +49,7 @@ function Signup() {
     }
 
     let Login=()=>{
-         window.location = "http://localhost:5173";
+         window.location = "https://stockpro-1.onrender.com";
     }
 
 
